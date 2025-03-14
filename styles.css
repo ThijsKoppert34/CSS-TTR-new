@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'digitaal';
+    src: url('../fonts/Digital7-rg1mL.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'digitaal1';
+    src: url('../fonts/Digital7Italic-BW658.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'digitaal2';
+    src: url('../fonts/Digital7Mono-Yz9J4.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'digitaal3';
+    src: url('../fonts/Digital7Monoitalic-8MDLJ.ttf') format('truetype');
+}
+
+body {
+    height: 100dvh;
+    margin: 0;
+
+    display: flex;
+}
+
+@media (orientation:portrait) {
+    body {
+        flex-direction: column;
+    }
+}
+
+main {
+    container-type: size;
+    container-name: lift-wrapper;
+
+    flex-grow: 1;
+    background-color: #f90;
+}
+
+main>div:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    background-color: yellow;
+}
+
+@container lift-wrapper (orientation:landscape) {
+    main>div:nth-of-type(1) {
+        flex-direction: row;
+    }
+}
+
+.cijfers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 12px solid #666;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 3em;
+    width: auto;
+    margin: 1em 1em 1em 1em;
+    background: #2d2d2d;
+    align-items: center;
+    font-family: digitaal;
+    z-index: 1;
+    color: greenyellow;
+    font-family: digitaal;
+    font-size: 30px;
+}
+
+.cijfers p {
+    font-size: 2.4rem;
+}
+
+paneel {
+    display: block;
+    background-image: linear-gradient(to bottom, #d2b48c, #a67b5b);
+    flex-grow: 1;
+}
+
+.liftbox {
+    /* display: block;
+    background-color: olivedrab;
+    aspect-ratio: 1;
+
+    width: 100cqmin;
+
+    display: grid;
+
+    perspective: 150vmin;
+    transform-style: preserve-3d; */
+
+    --width: 100cqmin;
+    --half-width: calc(var(--width) / 2);
+    width: var(--width);
+    aspect-ratio: 1;
+    perspective: 800px;
+    overflow: hidden;
+
+    * {
+        transform-style: preserve-3D;
+    }
+}
+
+.box {
+    width: var(--width);
+    aspect-ratio: 1;
+    position: relative;
+    transition: transform 0.5s ease-out;
+    transform: translateZ(calc(var(--half-width) * -1));
+
+    >* {
+        position: absolute;
+        inset: 0;
+    }
+
+    .muur-links {
+        background-image: linear-gradient(to bottom, #d2b48c, #a67b5b);
+        transform: rotateY(90deg) translateZ(calc(var(--half-width) * -1));
+    }
+
+    .muur-rechts {
+        background-image: linear-gradient(to bottom, #d2b48c, #a67b5b);
+        transform: rotateY(-90deg) translateZ(calc(var(--half-width) * -1));
+    }
+
+    .deuren {
+        background: #003;
+        transform: translateZ(calc(var(--half-width) * -1));
+    }
+
+    .plafond {
+        background: #ff0;
+        transform: rotateX(-90deg) translateZ(calc(var(--half-width) * -1));
+    }
+
+    .vloer {
+        background: #330;
+        transform: rotateX(90deg) translateZ(calc(var(--half-width) * -1));
+    }
+}
+
+.deur-links {
+    background-color: green;
+    width: 4em;
+    height: auto;
+}
+
+
+aside {
+    background: linear-gradient(135deg, #b0b0b0, #8a8a8a, #6e6e6e);
+    width: max(30vw, 16em);
+}
+
+@media (orientation:portrait) {
+    aside {
+        height: max(30vw, 16em);
+        width: unset;
+    }
+
+    paneel {
+        background-image: linear-gradient(to bottom, #30373d, #a7a4a3)
+    }
+}
+
+aside>section:nth-of-type(1) {
+    display: flex;
+}
+
+aside>section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+}
+
+
+input {
+    display: none;
+}
+
+label img {
+    width: 4rem;
+    margin: 1.5em 0 1.5em 0;
+    padding: 1em;
+    background: linear-gradient(135deg, #8a8a8a, #5c5c5c, #3c3c3c);
+    border-radius: 5px;
+    filter: drop-shadow(3px 1px 1px #2d2d2d);
+}
+
+label img:hover {
+    cursor: pointer;
+}
+
+body:has(input[value="internet"]:checked) .liftbox {
+    background-color: pink;
+}
+
+body:has(input[value="robot"]:checked) .liftbox {
+    background-color: red;
+}
+
+body:has(input[value="dino"]:checked) .liftbox {
+    background-color: deepskyblue;
+}
+
+body:has(input[value="knots"]:checked) .liftbox {
+    background-color: orange;
+}
+
+body:has(input[value="zwaard"]:checked) .liftbox {
+    background-color: lightseagreen;
+}
