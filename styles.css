@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'digitaal';
-    src: url('../fonts/Digital7-rg1mL.ttf') format('truetype');
+    src: url('../CSS-ttr/fonts/Digital7-rg1mL.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'digitaal1';
-    src: url('../fonts/Digital7Italic-BW658.ttf') format('truetype');
+    src: url('../CSS-ttr/fonts/Digital7Italic-BW658.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'digitaal2';
-    src: url('../fonts/Digital7Mono-Yz9J4.ttf') format('truetype');
+    src: url('../CSS-ttr/fonts/Digital7Mono-Yz9J4.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'digitaal3';
-    src: url('../fonts/Digital7Monoitalic-8MDLJ.ttf') format('truetype');
+    src: url('../CSS-ttr/fonts/Digital7Monoitalic-8MDLJ.ttf') format('truetype');
 }
 
 body {
@@ -36,7 +36,6 @@ main {
     container-name: lift-wrapper;
 
     flex-grow: 1;
-    background-color: #f90;
 }
 
 main>div:nth-of-type(1) {
@@ -45,7 +44,6 @@ main>div:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     container-type: inline-size;
-    background-color: yellow;
 }
 
 @container lift-wrapper (orientation:landscape) {
@@ -99,8 +97,9 @@ paneel {
     --half-width: calc(var(--width) / 2);
     width: var(--width);
     aspect-ratio: 1;
-    perspective: 800px;
+    perspective: 1350px;
     overflow: hidden;
+    background-color: red;
 
     * {
         transform-style: preserve-3D;
@@ -130,25 +129,45 @@ paneel {
     }
 
     .deuren {
-        background: #003;
+        background: none;
         transform: translateZ(calc(var(--half-width) * -1));
+        display: flex;
+        gap: .3em;
     }
 
     .plafond {
-        background: #ff0;
+        background: #2d2d2d;
         transform: rotateX(-90deg) translateZ(calc(var(--half-width) * -1));
     }
 
     .vloer {
-        background: #330;
+        background: #8a8a8a;
         transform: rotateX(90deg) translateZ(calc(var(--half-width) * -1));
     }
 }
 
 .deur-links {
-    background-color: green;
-    width: 4em;
+    background: linear-gradient(90deg,
+            #d9d9d9 0%,
+            #f2f2f2 25%,
+            #bfbfbf 50%,
+            #f2f2f2 75%,
+            #d9d9d9 100%);
+    width: 50%;
     height: auto;
+    /* border-right: solid 2px black; */
+}
+
+.deur-rechts {
+    background: linear-gradient(90deg,
+            #d9d9d9 0%,
+            #f2f2f2 25%,
+            #bfbfbf 50%,
+            #f2f2f2 75%,
+            #d9d9d9 100%);
+    width: 50%;
+    height: auto;
+    align-items: flex-end;
 }
 
 
@@ -198,7 +217,7 @@ label img:hover {
 }
 
 body:has(input[value="internet"]:checked) .liftbox {
-    background-color: pink;
+    background-color: turquoise;
 }
 
 body:has(input[value="robot"]:checked) .liftbox {
@@ -206,7 +225,7 @@ body:has(input[value="robot"]:checked) .liftbox {
 }
 
 body:has(input[value="dino"]:checked) .liftbox {
-    background-color: deepskyblue;
+    background-color: rgb(72, 255, 0);
 }
 
 body:has(input[value="knots"]:checked) .liftbox {
@@ -214,5 +233,5 @@ body:has(input[value="knots"]:checked) .liftbox {
 }
 
 body:has(input[value="zwaard"]:checked) .liftbox {
-    background-color: lightseagreen;
+    background-color: purple;
 }

@@ -38,6 +38,8 @@ De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. 
 
 ![Maandag 10/03](./images/14032025CSS.png)
 
+![Dinsdag 11/03](./images/13032025CSS.png)
+
 
 
  
