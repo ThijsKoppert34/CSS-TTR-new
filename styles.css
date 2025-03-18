@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'digitaal';
-    src: url('../CSS-ttr/fonts/Digital7-rg1mL.ttf') format('truetype');
+    src: url('../fonts/Digital7-rg1mL.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'digitaal1';
-    src: url('../CSS-ttr/fonts/Digital7Italic-BW658.ttf') format('truetype');
+    src: url('../fonts/Digital7Italic-BW658.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'digitaal2';
-    src: url('../CSS-ttr/fonts/Digital7Mono-Yz9J4.ttf') format('truetype');
+    src: url('../fonts/Digital7Mono-Yz9J4.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'digitaal3';
-    src: url('../CSS-ttr/fonts/Digital7Monoitalic-8MDLJ.ttf') format('truetype');
+    src: url('../fonts/Digital7Monoitalic-8MDLJ.ttf') format('truetype');
 }
 
 body {
@@ -29,6 +29,13 @@ body {
     body {
         flex-direction: column;
     }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
 
 main {
@@ -47,12 +54,18 @@ main>div:nth-of-type(1) {
 }
 
 @container lift-wrapper (orientation:landscape) {
+
+
     main>div:nth-of-type(1) {
         flex-direction: row;
     }
+
+
+
 }
 
-.cijfers {
+aside>section:nth-of-type(1) {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +73,7 @@ main>div:nth-of-type(1) {
     border-radius: 5px;
     box-sizing: border-box;
     height: 3em;
+    padding: 2rem 0;
     width: auto;
     margin: 1em 1em 1em 1em;
     background: #2d2d2d;
@@ -68,20 +82,17 @@ main>div:nth-of-type(1) {
     z-index: 1;
     color: greenyellow;
     font-family: digitaal;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 0.777vw + 1.318rem, 2.25rem);
 }
 
-.cijfers p {
-    font-size: 2.4rem;
-}
 
 paneel {
     display: block;
-    background-image: linear-gradient(to bottom, #d2b48c, #a67b5b);
+    background-color: #eeebe3;
     flex-grow: 1;
 }
 
-.liftbox {
+main section:nth-of-type(1) {
     /* display: block;
     background-color: olivedrab;
     aspect-ratio: 1;
@@ -99,14 +110,13 @@ paneel {
     aspect-ratio: 1;
     perspective: 1350px;
     overflow: hidden;
-    background-color: red;
 
-    * {
+    & * {
         transform-style: preserve-3D;
     }
 }
 
-.box {
+main>div>section>div:first-of-type {
     width: var(--width);
     aspect-ratio: 1;
     position: relative;
@@ -118,35 +128,52 @@ paneel {
         inset: 0;
     }
 
-    .muur-links {
-        background-image: linear-gradient(to bottom, #d2b48c, #a67b5b);
+    >div:nth-of-type(1) {
+        background-color: #e5e5f7;
+        opacity: 1;
+        background-size: 20px 20px;
+        background-image: repeating-linear-gradient(0deg, #2d2d2d, #2d2d2d 1px, #eeebe3 1px, #eeebe3);
         transform: rotateY(90deg) translateZ(calc(var(--half-width) * -1));
     }
 
-    .muur-rechts {
-        background-image: linear-gradient(to bottom, #d2b48c, #a67b5b);
+    >div:nth-of-type(2) {
+        background-color: #eeebe3;
+        opacity: 1;
+        background-size: 20px 20px;
+        background-image: repeating-linear-gradient(0deg, #2d2d2d, #2d2d2d 1px, #eeebe3 1px, #eeebe3);
         transform: rotateY(-90deg) translateZ(calc(var(--half-width) * -1));
     }
 
-    .deuren {
+    >div:nth-of-type(5) {
         background: none;
         transform: translateZ(calc(var(--half-width) * -1));
         display: flex;
         gap: .3em;
+        transition: background-image 2.2s ease-in;
     }
 
-    .plafond {
-        background: #2d2d2d;
+    >div:nth-of-type(3) {
+        background-color: #A9A9A9;
+        opacity: 1;
+        background-image: linear-gradient(#2d2d2d 1px, transparent 1px), linear-gradient(to right, #2d2d2d 1px, #A9A9A9 1px);
+        background-size: 20px 20px;
         transform: rotateX(-90deg) translateZ(calc(var(--half-width) * -1));
     }
 
-    .vloer {
-        background: #8a8a8a;
+    >div:nth-of-type(4) {
+        background-color: #eeebe3;
+        opacity: 1;
+        background-image: repeating-linear-gradient(45deg, #2d2d2d 25%, transparent 25%, transparent 75%, #2d2d2d 75%, #2d2d2d), repeating-linear-gradient(45deg, #2d2d2d 25%, #e5e5f7 25%, #e5e5f7 75%, #2d2d2d 75%, #2d2d2d);
+        background-position: 0 0, 10px 10px;
+        background-size: 80px 80px;
         transform: rotateX(90deg) translateZ(calc(var(--half-width) * -1));
     }
 }
 
-.deur-links {
+/* deur links */
+/* deur links */
+/* deur links */
+main>div>section>div>div>div:nth-of-type(1) {
     background: linear-gradient(90deg,
             #d9d9d9 0%,
             #f2f2f2 25%,
@@ -158,7 +185,10 @@ paneel {
     /* border-right: solid 2px black; */
 }
 
-.deur-rechts {
+/* deur rechts */
+/* deur rechts */
+/* deur rechts */
+main>div>section>div>div>div:nth-of-type(2) {
     background: linear-gradient(90deg,
             #d9d9d9 0%,
             #f2f2f2 25%,
@@ -176,20 +206,12 @@ aside {
     width: max(30vw, 16em);
 }
 
-@media (orientation:portrait) {
-    aside {
-        height: max(30vw, 16em);
-        width: unset;
-    }
 
-    paneel {
-        background-image: linear-gradient(to bottom, #30373d, #a7a4a3)
-    }
-}
 
 aside>section:nth-of-type(1) {
     display: flex;
 }
+
 
 aside>section:nth-of-type(2) {
     display: grid;
@@ -198,6 +220,29 @@ aside>section:nth-of-type(2) {
 
 }
 
+@media (orientation:portrait) {
+    aside {
+        height: max(30vw, 16em);
+        width: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside section:last-of-type {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: .6em;
+        flex-wrap: wrap;
+        background: linear-gradient(135deg, #b0b0b0, #8a8a8a, #6e6e6e);
+
+    }
+
+    paneel {
+        background-color: #eeebe3;
+    }
+
+}
 
 input {
     display: none;
@@ -207,6 +252,7 @@ label img {
     width: 4rem;
     margin: 1.5em 0 1.5em 0;
     padding: 1em;
+    border: solid .6px rgb(110, 110, 110);
     background: linear-gradient(135deg, #8a8a8a, #5c5c5c, #3c3c3c);
     border-radius: 5px;
     filter: drop-shadow(3px 1px 1px #2d2d2d);
@@ -216,22 +262,405 @@ label img:hover {
     cursor: pointer;
 }
 
-body:has(input[value="internet"]:checked) .liftbox {
-    background-color: turquoise;
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: white;
+    margin-top: 10rem;
 }
 
-body:has(input[value="robot"]:checked) .liftbox {
-    background-color: red;
+:has(input[value="holbewoner"]:checked) main>div>section>div>div>div:nth-of-type(1),
+:has(input[value="holbewoner"]:checked) main>div>section>div>div>div:nth-of-type(2) {
+    animation-name: --animatieHolbewoner;
 }
 
-body:has(input[value="dino"]:checked) .liftbox {
-    background-color: rgb(72, 255, 0);
+:has(input[value="knots"]:checked) main>div>section>div>div>div:nth-of-type(1),
+:has(input[value="knots"]:checked) main>div>section>div>div>div:nth-of-type(2) {
+    animation-name: --animatieKnots;
 }
 
-body:has(input[value="knots"]:checked) .liftbox {
-    background-color: orange;
+:has(input[value="zwaard"]:checked) main>div>section>div>div>div:nth-of-type(1),
+:has(input[value="zwaard"]:checked) main>div>section>div>div>div:nth-of-type(2) {
+    animation-name: --animatieZwaard;
 }
 
-body:has(input[value="zwaard"]:checked) .liftbox {
-    background-color: purple;
+:has(input[value="robot"]:checked) main>div>section>div>div>div:nth-of-type(1),
+:has(input[value="robot"]:checked) main>div>section>div>div>div:nth-of-type(2) {
+    animation-name: --animatieRobot;
+}
+
+:has(input[value="dino"]:checked) main>div>section>div>div>div:nth-of-type(1),
+:has(input[value="dino"]:checked) main>div>section>div>div>div:nth-of-type(2) {
+    animation-name: --animatieDino;
+}
+
+:has(input[value="internet"]:checked) main>div>section>div>div>div:nth-of-type(1),
+:has(input[value="internet"]:checked) main>div>section>div>div>div:nth-of-type(2) {
+    animation-name: --animatieInternet;
+}
+
+:has(input[value="internet"]:checked) {
+
+    & main>div>section>div>div:nth-of-type(5) {
+        background-image: url(./images/nu.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & ul {
+        transform: translateY(240px);
+        transition: 2s linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141 11.4%, 0.25, 0.39, 0.562, 0.764,
+                1 30.3%, 0.847 34.8%, 0.787, 0.737, 0.699, 0.672, 0.655, 0.65, 0.656, 0.672,
+                0.699, 0.738, 0.787, 0.847 61.7%, 1 66.2%, 0.946, 0.908, 0.885 74.2%, 0.879,
+                0.878, 0.879, 0.885 79.5%, 0.908, 0.946, 1 87.4%, 0.981, 0.968, 0.96, 0.957,
+                0.96, 0.968, 0.981, 1);
+    }
+
+    p::after {
+        content: "Nu";
+        transition: 2s;
+    }
+}
+
+:has(input[value="robot"]:checked) {
+
+    & main>div>section>div>div:nth-of-type(5) {
+        background-image: url(./images/toekomst.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & ul {
+        transform: translateY(405px);
+        transition: 2s linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141 11.4%, 0.25, 0.39, 0.562, 0.764,
+                1 30.3%, 0.847 34.8%, 0.787, 0.737, 0.699, 0.672, 0.655, 0.65, 0.656, 0.672,
+                0.699, 0.738, 0.787, 0.847 61.7%, 1 66.2%, 0.946, 0.908, 0.885 74.2%, 0.879,
+                0.878, 0.879, 0.885 79.5%, 0.908, 0.946, 1 87.4%, 0.981, 0.968, 0.96, 0.957,
+                0.96, 0.968, 0.981, 1);
+    }
+
+    p::after {
+        content: "Toekomst";
+        transition: 2s;
+    }
+}
+
+
+:has(input[value="holbewoner"]:checked) {
+
+    & main>div>section>div>div:nth-of-type(5) {
+        background-image: url(./images/neanderthalers.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & ul {
+        transform: translateY(-240px);
+        transition: 2s linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141 11.4%, 0.25, 0.39, 0.562, 0.764,
+                1 30.3%, 0.847 34.8%, 0.787, 0.737, 0.699, 0.672, 0.655, 0.65, 0.656, 0.672,
+                0.699, 0.738, 0.787, 0.847 61.7%, 1 66.2%, 0.946, 0.908, 0.885 74.2%, 0.879,
+                0.878, 0.879, 0.885 79.5%, 0.908, 0.946, 1 87.4%, 0.981, 0.968, 0.96, 0.957,
+                0.96, 0.968, 0.981, 1);
+    }
+
+    p::after {
+        content: "Eerste mensen";
+        transition: 2s;
+    }
+}
+
+:has(input[value="dino"]:checked) {
+
+    & main>div>section>div>div:nth-of-type(5) {
+        background-image: url(./images/dinos.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & ul {
+        transform: translateY(-410px);
+        transition: 2s linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141 11.4%, 0.25, 0.39, 0.562, 0.764,
+                1 30.3%, 0.847 34.8%, 0.787, 0.737, 0.699, 0.672, 0.655, 0.65, 0.656, 0.672,
+                0.699, 0.738, 0.787, 0.847 61.7%, 1 66.2%, 0.946, 0.908, 0.885 74.2%, 0.879,
+                0.878, 0.879, 0.885 79.5%, 0.908, 0.946, 1 87.4%, 0.981, 0.968, 0.96, 0.957,
+                0.96, 0.968, 0.981, 1);
+    }
+
+    p::after {
+        content: "Dino's";
+        transition: 2s;
+    }
+}
+
+:has(input[value="zwaard"]:checked) {
+
+    & main>div>section>div>div:nth-of-type(5) {
+        background-image: url(./images/middeleeuwen.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & ul {
+        transform: translateY(70px);
+        transition: 2s linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141 11.4%, 0.25, 0.39, 0.562, 0.764,
+                1 30.3%, 0.847 34.8%, 0.787, 0.737, 0.699, 0.672, 0.655, 0.65, 0.656, 0.672,
+                0.699, 0.738, 0.787, 0.847 61.7%, 1 66.2%, 0.946, 0.908, 0.885 74.2%, 0.879,
+                0.878, 0.879, 0.885 79.5%, 0.908, 0.946, 1 87.4%, 0.981, 0.968, 0.96, 0.957,
+                0.96, 0.968, 0.981, 1);
+    }
+
+    p::after {
+        content: "Middeleeuwen";
+        transition: 2s;
+    }
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    transform: translateY(-500px);
+}
+
+li {
+    padding: 2em 0;
+}
+
+
+:has(input[value="knots"]:checked) {
+
+    & .deuren {
+        background-image: url(./images/jagers.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & ul {
+        transform: translateY(-80px);
+        transition: 2s linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141 11.4%, 0.25, 0.39, 0.562, 0.764,
+                1 30.3%, 0.847 34.8%, 0.787, 0.737, 0.699, 0.672, 0.655, 0.65, 0.656, 0.672,
+                0.699, 0.738, 0.787, 0.847 61.7%, 1 66.2%, 0.946, 0.908, 0.885 74.2%, 0.879,
+                0.878, 0.879, 0.885 79.5%, 0.908, 0.946, 1 87.4%, 0.981, 0.968, 0.96, 0.957,
+                0.96, 0.968, 0.981, 1);
+    }
+
+    p::after {
+        content: "Jagers";
+        transition: 2s;
+    }
+}
+
+
+@keyframes --animatieInternet {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Start gesloten */
+    50% {
+        transform: translateX(0%);
+    }
+
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+@keyframes --animatieInternetStart {
+    0% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+
+@keyframes --animatieKnots {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Start gesloten */
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+@keyframes --animatieZwaard {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Start gesloten */
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+@keyframes --animatieDino {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Start gesloten */
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+
+@keyframes --animatieRobot {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Start gesloten */
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+@keyframes --animatieHolbewoner {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Start gesloten */
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    /* Even dicht blijven */
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    /* Openen */
+}
+
+main>div>section>div>div>div:nth-of-type(2),
+main>div>section>div>div>div:nth-of-type(1) {
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    transform: translateX(0%);
+    transition: 2s ease-in-out;
+}
+
+@media screen and (max-width: 999px) {
+    paneel {
+
+        &:first-of-type {
+            background: #2d2d2d;
+        }
+
+        &:last-of-type {
+            background: #8a8a8a;
+        }
+    }
+
+    :has(input[value="knots"]:checked) {
+
+        & ul {
+            transform: translateY(-65px);
+        }
+    }
+
+    :has(input[value="zwaard"]:checked) {
+
+        & ul {
+            transform: translateY(70px);
+        }
+    }
+
+    :has(input[value="dino"]:checked) {
+
+        & ul {
+            transform: translateY(-330px);
+        }
+    }
+
+    :has(input[value="internet"]:checked) {
+
+        & ul {
+            transform: translateY(190px);
+        }
+    }
+
+    :has(input[value="robot"]:checked) {
+
+        & ul {
+            transform: translateY(315px);
+        }
+    }
 }
