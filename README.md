@@ -95,7 +95,6 @@ Wat ik vandaag gedaan heb is:
 Belangrijke dingen die ik heb geleerd vandaag:
 - Je kan heel eenvoudig een 'slot' animatie maken als je overflow: hidden gebruikr en vervolgens een ul verplaatst met transform: translateY
 - Een 3d effect werkt beter als je een pattern gebruikt. Deze gaat dan de diepte in waardoor je het effect beter ziet
-- Ik kan meer dan ik denk
 
 ![Dinsdag 11/03](./images/19032025CSS.png)
 
