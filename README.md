@@ -76,18 +76,28 @@ Belangrijke dingen die ik heb geleerd vandaag:
 ![Dinsdag 11/03](./images/13032025CSS.png)
 
 **Week 4, maandag 17 mrt**
-Vandaag heb ik veel zitten kloten met het design. Het ging steeds stuk en de responsiveness was weg. Ik heb besloten om een nieuwe index.html bestand te maken zodat ik wat meer overzicht heb. Vervolgens ben ik naar Nils gegaan om samen de lift opnieuw te maken, zodat ik het wat beter snap. Ik begrijp nu beter hoe de lift in elkaar zit en de scaling werkt ook top. 
+Vandaag heb ik al mijn classes verwijderd en ervoor gezorgd dat het control panel responsive is. Dit heb ik gedaan door gebruik te maken van orientation: portrait en vervolgens display flex toe te passen. Ook heb ik alle plaatjes door Ai laten genereren zodat alle scenes er in dezelfde stijl uit zien. 
 
-De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. Als dat niet lukt pak ik de animatie uit mijn vorige html bestand. 
+Belangrijke dingen die ik heb geleerd vandaag:
+- Geen classes gebruiken vanaf het begin (als het niet mag)
+- Beter en sneller gebruik kunnen maken van display: flex;
 
 ![Dinsdag 11/03](./images/13032025CSS.png)
 
 **Week 4, dinsdag 18 mrt**
+Dit was voornamelijk puntjes op de i zetten en nog wat kleine coole 3d effecten toepassen. 
 
-Animatie van de tijd
-Korte hulp van Sanne, ul naar beneden laten vallen
+Wat ik vandaag gedaan heb is:
+- De muren een gradient gegeven met een patroon, waardoor het 3d effect beter zichtbaar is
+- Een titel op het plafond gezet die verandert als er een andere radio button gekozen word
+- De tekst van het jaartal geanimeerd
 
-![Dinsdag 11/03](./images/13032025CSS.png)
+Belangrijke dingen die ik heb geleerd vandaag:
+- Je kan heel eenvoudig een 'slot' animatie maken als je overflow: hidden gebruikr en vervolgens een ul verplaatst met transform: translateY
+- Een 3d effect werkt beter als je een pattern gebruikt. Deze gaat dan de diepte in waardoor je het effect beter ziet
+- Ik kan meer dan ik denk
+
+![Dinsdag 11/03](./images/19032025CSS.png)
 
 
 
