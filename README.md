@@ -42,9 +42,36 @@ Belangrijke dingen die ik heb geleerd vandaag:
 ![Maandag 10/03](./images/14032025CSS.png)
 
 **Week 3, dinsdag 11 mrt**
-Vandaag heb ik veel zitten kloten met het design. Het ging steeds stuk en de responsiveness was weg. Ik heb besloten om een nieuwe index.html bestand te maken zodat ik wat meer overzicht heb. Vervolgens ben ik naar Nils gegaan om samen de lift opnieuw te maken, zodat ik het wat beter snap. Ik begrijp nu beter hoe de lift in elkaar zit en de scaling werkt ook top. 
+Deze dag heb ik op de planning staan om de verschillende knoppen de liftdeuren te laten openen. Ik had de verschillende knoppen al aangeroepen met :has, ik heb dit getest door de achtergrond van de lift te veranderen. Voor de animatie heb ik hulp gevraagd bij Nils.
 
-De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. Als dat niet lukt pak ik de animatie uit mijn vorige html bestand. 
+Samen met Nils de animatie werkend gemaakt. Dit ging vrij soepel moet ik eerlijk zeggen. Nils legde mij uit dat ik de twee verschillende divjes (deuren) in html al een waarde mee kon geven, een soort variabel. De naam van deze variabel is voor beide deuren hetzelfde, maar hebben een andere waarde. In mijn geval was dit voor de ene deur -100% en voor de andere deur 100%. In de animatie heb ik het als volgt staan: 
+
+@keyframes --animatieDino {
+    0% {
+        transform: translateX(var(--deurAnimatie));
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(var(--deurAnimatie));
+    }
+}
+
+Dit is dus openen + sluiten + openen (eindstate)
+
+Dit is zeker iets wat ik in de toekomst vaker ga gebruiken!
+
+Belangrijke dingen die ik heb geleerd vandaag:
+- variabelen in html
+- soepeler animeren
+- :has verfijnd / versneld
 
 ![Dinsdag 11/03](./images/13032025CSS.png)
 
@@ -52,6 +79,13 @@ De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. 
 Vandaag heb ik veel zitten kloten met het design. Het ging steeds stuk en de responsiveness was weg. Ik heb besloten om een nieuwe index.html bestand te maken zodat ik wat meer overzicht heb. Vervolgens ben ik naar Nils gegaan om samen de lift opnieuw te maken, zodat ik het wat beter snap. Ik begrijp nu beter hoe de lift in elkaar zit en de scaling werkt ook top. 
 
 De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. Als dat niet lukt pak ik de animatie uit mijn vorige html bestand. 
+
+![Dinsdag 11/03](./images/13032025CSS.png)
+
+**Week 4, dinsdag 18 mrt**
+
+Animatie van de tijd
+Korte hulp van Sanne, ul naar beneden laten vallen
 
 ![Dinsdag 11/03](./images/13032025CSS.png)
 
