@@ -36,7 +36,22 @@ Vandaag heb ik veel zitten kloten met het design. Het ging steeds stuk en de res
 
 De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. Als dat niet lukt pak ik de animatie uit mijn vorige html bestand. 
 
+Belangrijke dingen die ik heb geleerd vandaag:
+- @media properties: orientation: landscape & portrait 
+
 ![Maandag 10/03](./images/14032025CSS.png)
+
+**Week 3, dinsdag 11 mrt**
+Vandaag heb ik veel zitten kloten met het design. Het ging steeds stuk en de responsiveness was weg. Ik heb besloten om een nieuwe index.html bestand te maken zodat ik wat meer overzicht heb. Vervolgens ben ik naar Nils gegaan om samen de lift opnieuw te maken, zodat ik het wat beter snap. Ik begrijp nu beter hoe de lift in elkaar zit en de scaling werkt ook top. 
+
+De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. Als dat niet lukt pak ik de animatie uit mijn vorige html bestand. 
+
+![Dinsdag 11/03](./images/13032025CSS.png)
+
+**Week 4, maandag 17 mrt**
+Vandaag heb ik veel zitten kloten met het design. Het ging steeds stuk en de responsiveness was weg. Ik heb besloten om een nieuwe index.html bestand te maken zodat ik wat meer overzicht heb. Vervolgens ben ik naar Nils gegaan om samen de lift opnieuw te maken, zodat ik het wat beter snap. Ik begrijp nu beter hoe de lift in elkaar zit en de scaling werkt ook top. 
+
+De deur-animatie wil ik eigenlijk zelf opnieuw gaan maken met overflow: hidden. Als dat niet lukt pak ik de animatie uit mijn vorige html bestand. 
 
 ![Dinsdag 11/03](./images/13032025CSS.png)
 

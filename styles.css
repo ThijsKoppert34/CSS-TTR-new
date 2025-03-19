@@ -34,8 +34,6 @@ body {
         display: flex;
         flex-direction: column;
     }
-
-
 }
 
 main {
@@ -55,13 +53,9 @@ main>div:nth-of-type(1) {
 
 @container lift-wrapper (orientation:landscape) {
 
-
     main>div:nth-of-type(1) {
         flex-direction: row;
     }
-
-
-
 }
 
 aside>section:nth-of-type(1) {
@@ -85,7 +79,6 @@ aside>section:nth-of-type(1) {
     font-size: clamp(1.5rem, 0.777vw + 1.318rem, 2.25rem);
 }
 
-
 paneel {
     display: block;
     background-color: #eeebe3;
@@ -93,27 +86,20 @@ paneel {
 }
 
 main section:nth-of-type(1) {
-    /* display: block;
-    background-color: olivedrab;
-    aspect-ratio: 1;
-
-    width: 100cqmin;
-
-    display: grid;
-
-    perspective: 150vmin;
-    transform-style: preserve-3d; */
-
     --width: 100cqmin;
     --half-width: calc(var(--width) / 2);
     width: var(--width);
+    /* custom properties werkt makkelijker omdat je de getallen dan niet los hoeft aan te passen */
     aspect-ratio: 1;
+    /* aspect-ratio: 1 maakt iets vierkant */
     perspective: 1350px;
     overflow: hidden;
 
     & * {
         transform-style: preserve-3D;
     }
+
+    /* nesten met een * betekend dat je alles selecteerd */
 }
 
 main>div>section>div:first-of-type {
@@ -170,9 +156,6 @@ main>div>section>div:first-of-type {
     }
 }
 
-/* deur links */
-/* deur links */
-/* deur links */
 main>div>section>div>div>div:nth-of-type(1) {
     background: linear-gradient(90deg,
             #d9d9d9 0%,
@@ -182,12 +165,8 @@ main>div>section>div>div>div:nth-of-type(1) {
             #d9d9d9 100%);
     width: 50%;
     height: auto;
-    /* border-right: solid 2px black; */
 }
 
-/* deur rechts */
-/* deur rechts */
-/* deur rechts */
 main>div>section>div>div>div:nth-of-type(2) {
     background: linear-gradient(90deg,
             #d9d9d9 0%,
@@ -200,18 +179,14 @@ main>div>section>div>div>div:nth-of-type(2) {
     align-items: flex-end;
 }
 
-
 aside {
     background: linear-gradient(135deg, #b0b0b0, #8a8a8a, #6e6e6e);
     width: max(30vw, 16em);
 }
 
-
-
 aside>section:nth-of-type(1) {
     display: flex;
 }
-
 
 aside>section:nth-of-type(2) {
     display: grid;
@@ -235,13 +210,11 @@ aside>section:nth-of-type(2) {
         gap: .6em;
         flex-wrap: wrap;
         background: linear-gradient(135deg, #b0b0b0, #8a8a8a, #6e6e6e);
-
     }
 
     paneel {
         background-color: #eeebe3;
     }
-
 }
 
 input {
@@ -347,7 +320,6 @@ p {
     }
 }
 
-
 :has(input[value="holbewoner"]:checked) {
 
     & main>div>section>div>div:nth-of-type(5) {
@@ -434,7 +406,7 @@ li {
 
 :has(input[value="knots"]:checked) {
 
-    & .deuren {
+    & main>div>section>div>div:nth-of-type(5) {
         background-image: url(./images/jagers.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -455,28 +427,22 @@ li {
     }
 }
 
-
 @keyframes --animatieInternet {
     0% {
         transform: translateX(var(--deurAnimatie));
     }
 
-    /* Start gesloten */
     50% {
         transform: translateX(0%);
     }
-
 
     75% {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
 
 @keyframes --animatieInternetStart {
@@ -488,12 +454,9 @@ li {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
 
 
@@ -502,7 +465,6 @@ li {
         transform: translateX(var(--deurAnimatie));
     }
 
-    /* Start gesloten */
     50% {
         transform: translateX(0%);
     }
@@ -511,12 +473,9 @@ li {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
 
 @keyframes --animatieZwaard {
@@ -524,7 +483,6 @@ li {
         transform: translateX(var(--deurAnimatie));
     }
 
-    /* Start gesloten */
     50% {
         transform: translateX(0%);
     }
@@ -533,12 +491,9 @@ li {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
 
 @keyframes --animatieDino {
@@ -546,7 +501,6 @@ li {
         transform: translateX(var(--deurAnimatie));
     }
 
-    /* Start gesloten */
     50% {
         transform: translateX(0%);
     }
@@ -555,21 +509,16 @@ li {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
-
 
 @keyframes --animatieRobot {
     0% {
         transform: translateX(var(--deurAnimatie));
     }
 
-    /* Start gesloten */
     50% {
         transform: translateX(0%);
     }
@@ -578,12 +527,9 @@ li {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
 
 @keyframes --animatieHolbewoner {
@@ -591,7 +537,6 @@ li {
         transform: translateX(var(--deurAnimatie));
     }
 
-    /* Start gesloten */
     50% {
         transform: translateX(0%);
     }
@@ -600,13 +545,12 @@ li {
         transform: translateX(0%);
     }
 
-    /* Even dicht blijven */
     100% {
         transform: translateX(var(--deurAnimatie));
     }
-
-    /* Openen */
 }
+
+/* verschillende animaties, want als je er 1 hebt word de animatie al gezien als uitgevoerd en kun je hem dus niet nog een keer uitvoeren */
 
 main>div>section>div>div>div:nth-of-type(2),
 main>div>section>div>div>div:nth-of-type(1) {
